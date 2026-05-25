@@ -45,19 +45,24 @@
 
     header {
       display: flex;
-      gap: 28px;
-      align-items: center;
+      gap: 32px;
+      align-items: flex-start;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
     }
 
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 200px;
+      height: 250px;
       border-radius: 50%;
       object-fit: cover;
       background: var(--card-bg);
       border: 1px solid var(--border);
+    }
+
+    .intro {
+      flex: 1;
+      min-width: 0;
     }
 
     .intro h1 {
@@ -104,6 +109,15 @@
       font-size: 0.95rem;
     }
 
+    .item-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -120,6 +134,17 @@
       color: var(--muted);
     }
 
+    .header-interests {
+      margin-top: 18px;
+    }
+
+    .header-interests-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
     footer {
       padding-top: 24px;
       color: var(--muted);
@@ -134,8 +159,8 @@
       }
 
       .profile-img {
-        width: 120px;
-        height: 120px;
+        width: 136px;
+        height: 136px;
       }
 
       .intro h1 {
@@ -157,8 +182,21 @@
           <a href="https://github.com/kchaehyeon01" target="_blank" rel="noopener">GitHub</a> ·
           <a href="https://www.linkedin.com/in/kimchaehyeonkim" target="_blank" rel="noopener">LinkedIn</a> ·
           <a href="https://scholar.google.com/citations?authuser=3&user=1fMEGkgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
-          <a href="https://github.com/kchaehyeon01/kimchaehyeonkim/blob/main/assets/CV_ChaehyeonKim.pdf" target="_blank" rel="noopener">CV</a>
+          <a href="assets/CV.pdf" target="_blank" rel="noopener">CV</a>
         </p>
+
+        <div class="header-interests" aria-label="Research interests">
+          <p class="header-interests-title">Research Interests</p>
+          <div class="tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">3D Vision</span>
+            <span class="tag">Model Merging</span>
+            <span class="tag">Agentic AI</span>
+            <span class="tag">VLA</span>
+            <span class="tag">Autonomous Driving</span>
+            <span class="tag">Generative Model</span>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -167,36 +205,36 @@
       <p> TODO </p>
     </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <div class="tags">
-        <span class="tag">Computer Vision</span>
-        <span class="tag">3D Gaussian Splatting</span>
-        <span class="tag">Model Merging</span>
-        <span class="tag">Efficient Deep Learning</span>
-        <span class="tag">Representation Learning</span>
-      </div>
-    </section>
-
     <section id="publications">
       <h2>Publications</h2>
 
       <div class="item">
-        <p class="item-title">RankAlloc: Model Merging with Adaptive Spectral Rank Allocation</p>
-        <p class="item-meta">Chaehyeon Kim et al. · Under Review</p>
-        <p>
-          A model merging method that adaptively allocates spectral ranks to improve merging quality and parameter efficiency.
+        <p class="item-title">RankAlloc: Model Merging with Spectral Adaptive Rank Allocation</p>
+        <p class="item-meta"><u>Chaehyeon Kim</u>, Jihwan Park, Youngseo Cho, Gang Hyun Shin, Juyeon Ko, Hyunwoo J. Kim</p>
+        <p class="item-meta"><em>Under Review</em></p>
+        <p class="item-links">
+          <!-- <a href="" target="_blank" rel="noopener">Paper</a> · -->
+          <!-- <a href="" target="_blank" rel="noopener">Website</a> -->
+        </p>
+      </div>
+
+      <div class="item">
+        <p class="item-title">F4Splat: Feed-Forward Predictive Densification for Feed-Forward 3D Gaussian Splatting</p>
+        <p class="item-meta">Injae Kim, <u>Chaehyeon Kim</u>, Minseong Bae, Minseok Joo, Hyunwoo J. Kim</p>
+        <p class="item-meta"><em>Under Review</em></p>
+        <p class="item-links">
+          <a href="https://arxiv.org/pdf/2603.21304" target="_blank" rel="noopener">Paper</a> ·
+          <a href="https://mlvlab.github.io/F4Splat/" target="_blank" rel="noopener">Website</a>
         </p>
       </div>
 
       <div class="item">
         <p class="item-title">Study of Adversarial Attack and Defense Deep Learning Model for Autonomous Driving</p>
-        <p class="item-meta">Chaehyeon Kim et al. · Proceedings of ACK 2022</p>
-        <p>
-          A study on adversarial attack and defense methods for deep learning models in autonomous driving scenarios.
-        </p>
-        <p>
-          <a href="https://kiss.kstudy.com/Detail/Ar?key=3988564" target="_blank" rel="noopener">Paper</a>
+        <p class="item-meta"><u>Chaehyeon Kim</u>, Jinkyu Lee, Eun Jung, Jaeho Jung, Hyunjung Lee, Gyuyoung Lee</p>
+        <p class="item-meta"><em>Annual Conference of KIPS (ACK 2022)</em></p>
+        <p class="item-links">
+          <a href="https://kiss.kstudy.com/Detail/Ar?key=3988564" target="_blank" rel="noopener">Paper</a> ·
+          <a href="https://www.youtube.com/watch?v=7-XDBGTxpEU" target="_blank" rel="noopener">Video</a>
         </p>
       </div>
     </section>
@@ -205,26 +243,17 @@
       <h2>Projects</h2>
 
       <div class="item">
-        <p class="item-title">Feed-forward 3D Gaussian Splatting</p>
-        <p class="item-meta">Research Project</p>
-        <p>
-          Reproduced baseline methods and analyzed rendering quality, reconstruction fidelity,
-          and Gaussian-count efficiency for feed-forward 3D Gaussian Splatting.
-        </p>
+        <p class="item-title">TODO</p>
+        <p class="item-meta">TODO</p>
+        <p>TODO</p>
       </div>
 
-      <div class="item">
-        <p class="item-title">Adaptive Gaussian Allocation</p>
-        <p class="item-meta">Research Project</p>
-        <p>
-          Explored predictive densification and adaptive Gaussian allocation for efficient 3D scene representation.
-        </p>
-      </div>
     </section>
 
     <footer>
-      © 2026 Chaehyeon Kim.
+      © Chaehyeon Kim.
     </footer>
+
   </main>
 </body>
 </html>
